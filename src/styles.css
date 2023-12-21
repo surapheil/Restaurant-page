@@ -4,6 +4,10 @@
     box-sizing: border-box; /* Optionally, include this for consistent box-sizing */
 }
 
+#content{
+    height: 100%;
+}
+
 .top{
     background-color: #111827;
     height: 10em;
@@ -28,4 +32,32 @@
     color: #ecfccb;
 
 }
+
+
+.bgImg{
+    width: 100%;
+    display: block;
+}
+
+.footer{
+    display: flex;
+    background-color: #111827;
+    color: #ecfccb;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.githubIcon{
+    width: 1rem;
+    height: 1rem;
+    background-color: #ecfccb;
+    border-radius: 100%;
+}
+
+.githubLink{
+    padding-top: 5px;
+}
+
 
