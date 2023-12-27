@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -36,6 +39,7 @@
 
 .bgImg{
     width: 100%;
+    height: 50em;
     display: block;
 }
 
@@ -61,3 +65,40 @@
 }
 
 
+.main{
+    position: relative;
+}
+
+.pageHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4em;
+    color: #f1f5f9;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0,0,0, 0.5);
+    height: 25em;
+    width: 23em;
+    font-size: 24px;
+}
+
+.poster{
+    border-radius: 50%;
+}
+
+.imel{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.dine{
+    font-family: 'Single Day', cursive;
+    font-weight: 600;
+    font-size: 2.8rem;
+}

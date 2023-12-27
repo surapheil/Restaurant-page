@@ -25,11 +25,13 @@ function main(){
     img.classList.add('bgImg');
     img.src = img3;
     mainCont.appendChild(img);
+    mainCont.appendChild(homePage);
     return mainCont
 }
 
 //append the img container to the main content
 content.appendChild(main());
+
 
 
 function createFooter(){
