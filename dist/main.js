@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n\nfunction topPage(){\n    const home = document.createElement('div');\n    const menu = document.createElement('div');\n    const contact = document.createElement('div');\n    const container = document.createElement('div');\n    home.classList.add('home');\n    home.innerHTML = 'Home';\n    menu.classList.add('menu');\n    menu.innerHTML = 'Menu';\n    contact.classList.add('contact');\n    contact.innerHTML = 'Contact';\n    container.classList.add('container');\n    container.appendChild(home);\n    container.appendChild(menu);\n    container.appendChild(contact);\n    return container;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (topPage);\n\n//# sourceURL=webpack://restaurant-page/./src/header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n\nfunction topPage(){\n    const home = document.createElement('button');\n    const menu = document.createElement('button');\n    const contact = document.createElement('button');\n    const container = document.createElement('div');\n    home.classList.add('home');\n    home.innerHTML = 'Home';\n    menu.classList.add('menu');\n    menu.innerHTML = 'Menu';\n    contact.classList.add('contact');\n    contact.innerHTML = 'Contact';\n    container.classList.add('container');\n    container.appendChild(home);\n    container.appendChild(menu);\n    container.appendChild(contact);\n    return container;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (topPage);\n\n//# sourceURL=webpack://restaurant-page/./src/header.js?");
 
 /***/ }),
 
@@ -136,7 +136,77 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./src/header.js\");\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _assets_img2_webp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/img2.webp */ \"./src/assets/img2.webp\");\n/* harmony import */ var _assets_github_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/github.png */ \"./src/assets/github.png\");\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n\n\n\n\n\nconst content = document.getElementById('content');\nconst top = document.createElement('div');\nfunction topHeader(){ \n    top.classList.add('top');\n    const header = document.createElement('div');\n    header.classList.add('head');\n    header.innerHTML = 'ImEl';\n    top.appendChild(header);\n    top.appendChild((0,_header__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()); \n    return top;\n}    \n//appending the top to the content container\ncontent.appendChild(topHeader());\n\n//adding background photo in for the main content\nconst mainCont = document.createElement('div');\nfunction main(){\n    mainCont.classList.add('main');\n    const img = document.createElement('img');\n    img.classList.add('bgImg');\n    img.src = _assets_img2_webp__WEBPACK_IMPORTED_MODULE_2__;\n    mainCont.appendChild(img);\n    mainCont.appendChild(_home__WEBPACK_IMPORTED_MODULE_4__[\"default\"]);\n    return mainCont\n}\n\n//append the img container to the main content\ncontent.appendChild(main());\n\n\n\nfunction createFooter(){\n    const footer = document.createElement('footer');\n    footer.classList.add('footer');\n\n    const p = document.createElement('p');\n    const copyrightSymbol = '&copy;'\n    p.innerHTML = `Copyright ${copyrightSymbol} ${new Date().getFullYear()} SuraphelGashu `;\n    const a = document.createElement('a');\n    a.classList.add('githubLink');\n    a.href = \"https://github.com/surapheil\";\n    const githubIcon = document.createElement('img');\n    githubIcon.classList.add('githubIcon');\n    githubIcon.src = _assets_github_png__WEBPACK_IMPORTED_MODULE_3__;\n    a.appendChild(githubIcon);\n    footer.appendChild(p);\n    footer.appendChild(a);\n    return footer;\n}\n\ncontent.appendChild(createFooter());\n\nconsole.log(_home__WEBPACK_IMPORTED_MODULE_4__[\"default\"]);\n\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./src/header.js\");\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _assets_img2_webp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/img2.webp */ \"./src/assets/img2.webp\");\n/* harmony import */ var _assets_github_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/github.png */ \"./src/assets/github.png\");\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\n\n\n\n\n\nconst content = document.getElementById('content');\nconst top = document.createElement('div');\nfunction topHeader(){ \n    top.classList.add('top');\n    const header = document.createElement('div');\n    header.classList.add('head');\n    header.innerHTML = 'ImEl';\n    top.appendChild(header);\n    top.appendChild((0,_header__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()); \n    return top;\n}    \n//appending the top to the content container\ncontent.appendChild(topHeader());\nconsole.log(topHeader());\n//adding background photo in for the main content\nconst mainCont = document.createElement('div');\nfunction main(){\n    mainCont.classList.add('main');\n    const img = document.createElement('img');\n    img.classList.add('bgImg');\n    img.src = _assets_img2_webp__WEBPACK_IMPORTED_MODULE_2__;\n    mainCont.appendChild(img);\n    mainCont.appendChild(_home__WEBPACK_IMPORTED_MODULE_4__[\"default\"]);\n    //calling an event listener that will display the menu and contact when clicked\n    // const showMenuBtn = document.getElementsByClassName('menu');\n    // console.log(showMenuBtn);\n    // showMenuBtn.onclick = function (){\n    //     homePage.style.display = none;\n    //     mainCont.appendChild(menuContainer);\n    // }\n    // const showContactBtn = document.querySelector('.contact');\n\n    const githubBtn = document.querySelector('.menu');\n    githubBtn.addEventListener('click', () => { \n        mainCont.removeChild(_home__WEBPACK_IMPORTED_MODULE_4__[\"default\"]);\n        mainCont.appendChild(_menu__WEBPACK_IMPORTED_MODULE_5__[\"default\"]);\n\n    });\n    console.log(githubBtn);\n\n    return mainCont;\n}\n\n//append the img container to the main content\ncontent.appendChild(main());\n\n\n\nfunction createFooter(){\n    const footer = document.createElement('footer');\n    footer.classList.add('footer');\n\n    const p = document.createElement('p');\n    const copyrightSymbol = '&copy;'\n    p.innerHTML = `Copyright ${copyrightSymbol} ${new Date().getFullYear()} SuraphelGashu `;\n    const a = document.createElement('a');\n    a.classList.add('githubLink');\n    a.href = \"https://github.com/surapheil\";\n    const githubIcon = document.createElement('img');\n    githubIcon.classList.add('githubIcon');\n    githubIcon.src = _assets_github_png__WEBPACK_IMPORTED_MODULE_3__;\n    a.appendChild(githubIcon);\n    footer.appendChild(p);\n    footer.appendChild(a);\n    return footer;\n}\n\ncontent.appendChild(createFooter());\n\nconsole.log(_home__WEBPACK_IMPORTED_MODULE_4__[\"default\"]);\n\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _assets_c2dd5d01_6710_4db1_9c6f_892ef4e84e4c_jpeg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/c2dd5d01-6710-4db1-9c6f-892ef4e84e4c.jpeg */ \"./src/assets/c2dd5d01-6710-4db1-9c6f-892ef4e84e4c.jpeg\");\n/* harmony import */ var _assets_f679badc_ca65_4305_851c_d7189d5d699d_jpeg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/f679badc-ca65-4305-851c-d7189d5d699d.jpeg */ \"./src/assets/f679badc-ca65-4305-851c-d7189d5d699d.jpeg\");\n/* harmony import */ var _assets_9e347296_c6d2_4dc8_a43f_04de12f55add_jpeg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/9e347296-c6d2-4dc8-a43f-04de12f55add.jpeg */ \"./src/assets/9e347296-c6d2-4dc8-a43f-04de12f55add.jpeg\");\n/* harmony import */ var _assets_7be0453e_2c10_456e_992e_97aa4d4f2c6b_jpeg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/7be0453e-2c10-456e-992e-97aa4d4f2c6b.jpeg */ \"./src/assets/7be0453e-2c10-456e-992e-97aa4d4f2c6b.jpeg\");\n/* harmony import */ var _assets_281800b0_c14f_4dbd_8707_8be10394b1dd_jpeg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/281800b0-c14f-4dbd-8707-8be10394b1dd.jpeg */ \"./src/assets/281800b0-c14f-4dbd-8707-8be10394b1dd.jpeg\");\n/* harmony import */ var _assets_a00ecbdb_f6af_486c_af1c_99d8a73463cc_jpeg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/a00ecbdb-f6af-486c-af1c-99d8a73463cc.jpeg */ \"./src/assets/a00ecbdb-f6af-486c-af1c-99d8a73463cc.jpeg\");\n\n\n\n\n\n\nconst menuContainer = document.createElement('div')\nfunction foodMenu(){\n    const item1 = document.createElement('div');\n    item1.classList.add('item1');\n    const item1Img = document.createElement('img');\n    item1Img.classList.add('item1Img');\n    item1Img.src = _assets_c2dd5d01_6710_4db1_9c6f_892ef4e84e4c_jpeg__WEBPACK_IMPORTED_MODULE_0__;\n    const item1Description = document.createElement('p');\n    item1Description.classList.add('disc1');\n    item1Description.innerHTML = 'food 1';\n    item1.appendChild(item1Img);\n    item1.appendChild(item1Description);\n\n    //---item 2\n    const item2 = document.createElement('div');\n    item2.classList.add('item1');\n    const item2Img = document.createElement('img');\n    item2Img.classList.add('item1Img');\n    item2Img.src = _assets_f679badc_ca65_4305_851c_d7189d5d699d_jpeg__WEBPACK_IMPORTED_MODULE_1__;\n    const item2Description = document.createElement('p');\n    item2Description.classList.add('disc1');\n    item2Description.innerHTML = 'food 2';\n    item2.appendChild(item2Img);\n    item2.appendChild(item2Description);\n\n    // ---item 3\n    const item3 = document.createElement('div');\n    item3.classList.add('item1');\n    const item3Img = document.createElement('img');\n    item3Img.classList.add('item1Img');\n    item3Img.src = _assets_9e347296_c6d2_4dc8_a43f_04de12f55add_jpeg__WEBPACK_IMPORTED_MODULE_2__;\n    const item3Description = document.createElement('p');\n    item3Description.classList.add('disc1');\n    item3Description.innerHTML = 'food 3';\n    item3.appendChild(item3Img);\n    item3.appendChild(item3Description);\n\n    // ---item 4\n    const item4 = document.createElement('div');\n    item4.classList.add('item1');\n    const item4Img = document.createElement('img');\n    item4Img.classList.add('item1Img');\n    item4Img.src = _assets_7be0453e_2c10_456e_992e_97aa4d4f2c6b_jpeg__WEBPACK_IMPORTED_MODULE_3__;\n    const item4Description = document.createElement('p');\n    item4Description.classList.add('disc1');\n    item4Description.innerHTML = 'food 4';\n    item4.appendChild(item4Img);\n    item4.appendChild(item4Description);\n\n    // ---item 5\n    const item5 = document.createElement('div');\n    item5.classList.add('item1');\n    const item5Img = document.createElement('img');\n    item5Img.classList.add('item1Img');\n    item5Img.src = _assets_281800b0_c14f_4dbd_8707_8be10394b1dd_jpeg__WEBPACK_IMPORTED_MODULE_4__;\n    const item5Description = document.createElement('p');\n    item5Description.classList.add('disc1');\n    item5Description.innerHTML = 'food 5';\n    item5.appendChild(item5Img);\n    item5.appendChild(item5Description);\n\n    // ---item 6\n    const item6 = document.createElement('div');\n    item6.classList.add('item1');\n    const item6Img = document.createElement('img');\n    item6Img.classList.add('item1Img');\n    item6Img.src = _assets_a00ecbdb_f6af_486c_af1c_99d8a73463cc_jpeg__WEBPACK_IMPORTED_MODULE_5__;\n    const item6Description = document.createElement('p');\n    item6Description.classList.add('disc1');\n    item6Description.innerHTML = 'food 6';\n    item6.appendChild(item6Img);\n    item6.appendChild(item6Description);\n\n    //append the items to the menu container\n    menuContainer.appendChild(item1);\n    menuContainer.appendChild(item2);\n    menuContainer.appendChild(item3);\n    menuContainer.appendChild(item4);\n    menuContainer.appendChild(item5);\n    menuContainer.appendChild(item6);\n\n    return menuContainer;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (foodMenu());\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
+
+/***/ }),
+
+/***/ "./src/assets/281800b0-c14f-4dbd-8707-8be10394b1dd.jpeg":
+/*!**************************************************************!*\
+  !*** ./src/assets/281800b0-c14f-4dbd-8707-8be10394b1dd.jpeg ***!
+  \**************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"d90999d1328b3757577f.jpeg\";\n\n//# sourceURL=webpack://restaurant-page/./src/assets/281800b0-c14f-4dbd-8707-8be10394b1dd.jpeg?");
+
+/***/ }),
+
+/***/ "./src/assets/7be0453e-2c10-456e-992e-97aa4d4f2c6b.jpeg":
+/*!**************************************************************!*\
+  !*** ./src/assets/7be0453e-2c10-456e-992e-97aa4d4f2c6b.jpeg ***!
+  \**************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"3c3123b4a145837ab091.jpeg\";\n\n//# sourceURL=webpack://restaurant-page/./src/assets/7be0453e-2c10-456e-992e-97aa4d4f2c6b.jpeg?");
+
+/***/ }),
+
+/***/ "./src/assets/9e347296-c6d2-4dc8-a43f-04de12f55add.jpeg":
+/*!**************************************************************!*\
+  !*** ./src/assets/9e347296-c6d2-4dc8-a43f-04de12f55add.jpeg ***!
+  \**************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"543933a0950ec5388ab4.jpeg\";\n\n//# sourceURL=webpack://restaurant-page/./src/assets/9e347296-c6d2-4dc8-a43f-04de12f55add.jpeg?");
+
+/***/ }),
+
+/***/ "./src/assets/a00ecbdb-f6af-486c-af1c-99d8a73463cc.jpeg":
+/*!**************************************************************!*\
+  !*** ./src/assets/a00ecbdb-f6af-486c-af1c-99d8a73463cc.jpeg ***!
+  \**************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"05aeb76064e2a819f27f.jpeg\";\n\n//# sourceURL=webpack://restaurant-page/./src/assets/a00ecbdb-f6af-486c-af1c-99d8a73463cc.jpeg?");
+
+/***/ }),
+
+/***/ "./src/assets/c2dd5d01-6710-4db1-9c6f-892ef4e84e4c.jpeg":
+/*!**************************************************************!*\
+  !*** ./src/assets/c2dd5d01-6710-4db1-9c6f-892ef4e84e4c.jpeg ***!
+  \**************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"92b098ad05ce918384c7.jpeg\";\n\n//# sourceURL=webpack://restaurant-page/./src/assets/c2dd5d01-6710-4db1-9c6f-892ef4e84e4c.jpeg?");
+
+/***/ }),
+
+/***/ "./src/assets/f679badc-ca65-4305-851c-d7189d5d699d.jpeg":
+/*!**************************************************************!*\
+  !*** ./src/assets/f679badc-ca65-4305-851c-d7189d5d699d.jpeg ***!
+  \**************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"c30def011e4bc25ad416.jpeg\";\n\n//# sourceURL=webpack://restaurant-page/./src/assets/f679badc-ca65-4305-851c-d7189d5d699d.jpeg?");
 
 /***/ }),
 

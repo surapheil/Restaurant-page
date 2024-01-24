@@ -1,0 +1,1 @@
+const contact = document.createElement('div');

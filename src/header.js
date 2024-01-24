@@ -1,8 +1,8 @@
 import './styles.css'
 function topPage(){
-    const home = document.createElement('div');
-    const menu = document.createElement('div');
-    const contact = document.createElement('div');
+    const home = document.createElement('button');
+    const menu = document.createElement('button');
+    const contact = document.createElement('button');
     const container = document.createElement('div');
     home.classList.add('home');
     home.innerHTML = 'Home';

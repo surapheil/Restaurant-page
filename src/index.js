@@ -3,6 +3,7 @@ import './styles.css';
 import img3 from './assets/img2.webp';
 import gIcon from './assets/github.png';
 import homePage from './home';
+import foodMenu from './menu';
 const content = document.getElementById('content');
 const top = document.createElement('div');
 function topHeader(){ 
@@ -16,7 +17,7 @@ function topHeader(){
 }    
 //appending the top to the content container
 content.appendChild(topHeader());
-
+console.log(topHeader());
 //adding background photo in for the main content
 const mainCont = document.createElement('div');
 function main(){
@@ -26,7 +27,24 @@ function main(){
     img.src = img3;
     mainCont.appendChild(img);
     mainCont.appendChild(homePage);
-    return mainCont
+    //calling an event listener that will display the menu and contact when clicked
+    // const showMenuBtn = document.getElementsByClassName('menu');
+    // console.log(showMenuBtn);
+    // showMenuBtn.onclick = function (){
+    //     homePage.style.display = none;
+    //     mainCont.appendChild(menuContainer);
+    // }
+    // const showContactBtn = document.querySelector('.contact');
+
+    const githubBtn = document.querySelector('.menu');
+    githubBtn.addEventListener('click', () => { 
+        mainCont.removeChild(homePage);
+        mainCont.appendChild(foodMenu);
+
+    });
+    console.log(githubBtn);
+
+    return mainCont;
 }
 
 //append the img container to the main content
