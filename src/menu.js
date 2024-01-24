@@ -4,7 +4,8 @@ import imgMenu3 from './assets/9e347296-c6d2-4dc8-a43f-04de12f55add.jpeg';
 import imgMenu4 from './assets/7be0453e-2c10-456e-992e-97aa4d4f2c6b.jpeg';
 import imgMenu5 from  './assets/281800b0-c14f-4dbd-8707-8be10394b1dd.jpeg';
 import imgMenu6 from './assets/a00ecbdb-f6af-486c-af1c-99d8a73463cc.jpeg';
-const menuContainer = document.createElement('div')
+const menuContainer = document.createElement('div');
+menuContainer.classList.add('menuContainer');
 function foodMenu(){
     const item1 = document.createElement('div');
     item1.classList.add('item1');
