@@ -4,6 +4,7 @@ import img3 from './assets/img2.webp';
 import gIcon from './assets/github.png';
 import homePage from './home';
 import foodMenu from './menu';
+import contactUs from './contact';
 const content = document.getElementById('content');
 const top = document.createElement('div');
 function topHeader(){ 
@@ -17,9 +18,10 @@ function topHeader(){
 }    
 //appending the top to the content container
 content.appendChild(topHeader());
-console.log(topHeader());
 //adding background photo in for the main content
 const mainCont = document.createElement('div');
+const elements = [homePage, foodMenu, contactUs];
+console.log(homePage);
 function main(){
     mainCont.classList.add('main');
     const img = document.createElement('img');
@@ -27,24 +29,28 @@ function main(){
     img.src = img3;
     mainCont.appendChild(img);
     mainCont.appendChild(homePage);
-    //calling an event listener that will display the menu and contact when clicked
-    // const showMenuBtn = document.getElementsByClassName('menu');
-    // console.log(showMenuBtn);
-    // showMenuBtn.onclick = function (){
-    //     homePage.style.display = none;
-    //     mainCont.appendChild(menuContainer);
-    // }
-    // const showContactBtn = document.querySelector('.contact');
-
+    
+    // // Switching between tabs
     const githubBtn = document.querySelector('.menu');
-    githubBtn.addEventListener('click', () => { 
-        mainCont.removeChild(homePage);
-        mainCont.appendChild(foodMenu);
+    githubBtn.addEventListener('click', () => switchTabs(foodMenu));
 
-    });
-    console.log(githubBtn);
+    const backHome = document.querySelector('.home');
+    backHome.addEventListener('click', () => switchTabs(homePage));
+
+    const contactBtn = document.querySelector(".contact");
+    contactBtn.addEventListener("click", () => switchTabs(contactUs));
 
     return mainCont;
+}
+
+function switchTabs(activeTab) {
+    elements.forEach(element => {
+        if (element === activeTab) {
+            mainCont.appendChild(element);
+        } else {
+            mainCont.removeChild(element);
+        }
+    });
 }
 
 //append the img container to the main content
@@ -73,6 +79,6 @@ function createFooter(){
 
 content.appendChild(createFooter());
 
-console.log(homePage);
+console.log(foodMenu);
 
 

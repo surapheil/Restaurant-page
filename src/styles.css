@@ -112,9 +112,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    overflow-x: scroll;
     box-sizing: border-box;
     gap: 10px;
+    width: fit-content;
 }
 
 
@@ -125,9 +125,9 @@
     align-items: center;
     gap: 1.4em;
     color: #f1f5f9;
-    background-color: rgba(0,0,0, 0.5);
-    height: 25em;
-    width: 23em;
+    background-color: rgba(0,0,0, 0.7);
+    height: 20em;
+    width: 18em;
     font-size: 24px;
 }
 
