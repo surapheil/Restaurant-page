@@ -87,6 +87,7 @@
     font-size: 24px;
 }
 
+
 .poster{
     border-radius: 50%;
 }
@@ -135,4 +136,34 @@
     height: 10em;
     width: 10em;
     border-radius: 50%;
+}
+
+
+.contactInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4em;
+    color: #f1f5f9;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0,0,0, 0.5);
+    height: 25em;
+    width: 23em;
+    font-size: 24px;
+
+}
+
+.mapImg{
+    height: 10em;
+    width: 10em;
+}
+
+.emailInfo{
+    color: #f1f9f5;
+    text-decoration: none;
 }

@@ -4,7 +4,7 @@ import img3 from './assets/img2.webp';
 import gIcon from './assets/github.png';
 import homePage from './home';
 import foodMenu from './menu';
-import contactUs from './contact';
+import addMap from './contact';
 const content = document.getElementById('content');
 const top = document.createElement('div');
 function topHeader(){ 
@@ -20,7 +20,7 @@ function topHeader(){
 content.appendChild(topHeader());
 //adding background photo in for the main content
 const mainCont = document.createElement('div');
-const elements = [homePage, foodMenu, contactUs];
+const elements = [homePage, foodMenu, addMap];
 console.log(homePage);
 function main(){
     mainCont.classList.add('main');
@@ -38,20 +38,21 @@ function main(){
     backHome.addEventListener('click', () => switchTabs(homePage));
 
     const contactBtn = document.querySelector(".contact");
-    contactBtn.addEventListener("click", () => switchTabs(contactUs));
+    contactBtn.addEventListener("click", () => switchTabs(addMap));
 
     return mainCont;
 }
 
 function switchTabs(activeTab) {
     elements.forEach(element => {
-        if (element === activeTab) {
+        if (element === activeTab && !mainCont.contains(element)) {
             mainCont.appendChild(element);
-        } else {
+        } else if (element !== activeTab && mainCont.contains(element)) {
             mainCont.removeChild(element);
         }
     });
 }
+
 
 //append the img container to the main content
 content.appendChild(main());
@@ -79,6 +80,6 @@ function createFooter(){
 
 content.appendChild(createFooter());
 
-console.log(foodMenu);
+console.log(addMap);
 
 
